@@ -1,0 +1,7 @@
+sudo: false
+language: scala
+jdk: oraclejdk7
+script:
+- git clone https://github.com/foundweekends/pamflet.git
+- cd pamflet && sbt "+publishLocal" && cd ..
+- sbt "so test"
