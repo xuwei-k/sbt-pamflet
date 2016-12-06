@@ -1,8 +1,11 @@
 lazy val scalaCompiler = Def.setting { "org.scala-lang" % "scala-compiler" % scalaVersion.value }
-lazy val pamflet = "net.databinder" %% "pamflet-library" % "0.7.0-SNAPSHOT"
+lazy val pamfletVersion = "0.7.0"
+lazy val pamflet = "org.foundweekends" %% "pamflet-library" % pamfletVersion
+lazy val pamfletKnockoff = "org.foundweekends" %% "pamflet-knockoff" % pamfletVersion
+lazy val specs2 = "org.specs2" %% "specs2-core" % "3.8.6"
 lazy val scala210 = "2.10.6"
 lazy val scala211 = "2.11.8"
-lazy val pluginDeps = Seq(pamflet)
+lazy val pluginDeps = Seq(pamflet, specs2 % "test", pamfletKnockoff % "test")
 
 lazy val commonSettings = Seq(
   organization := "com.eed3si9n",

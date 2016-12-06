@@ -1,5 +1,6 @@
 package pamflet.sbtpamflet
 
+import pamflet._
 import org.specs2._
 import com.tristanhunt.knockoff._
 
